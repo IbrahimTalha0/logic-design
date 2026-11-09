@@ -4,6 +4,8 @@ Lojik Tasarım dersinin sınavına hazırlanırken kendim için yazdığım, etk
 
 Anlatım Türkçe, terimlerin İngilizceleri de yanında veriliyor.
 
+**Canlı site:** https://ibrahimtalha0.github.io/lojik-tasarim-ders/
+
 ## Kapsam
 
 Kaynak kitap: Mano & Ciletti, *Digital Design* (5. baskı), Bölüm 1–4 (§4.5 girişine kadar).
