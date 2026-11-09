@@ -57,7 +57,7 @@ export function TwoLevelCircuit({ initial = "AB + CD'" }: { initial?: string }) 
   if ('err' in parsed) {
     return (
       <div className="lab">
-        <div className="lab-title">🔌 İki Seviyeli Devre Dönüştürücü</div>
+        <div className="lab-title">İki Seviyeli Devre Dönüştürücü</div>
         <input className="q-input mono" value={src} onChange={(e) => setSrc(e.target.value)} />
         <div className="lab-err">{parsed.err}</div>
       </div>
@@ -127,7 +127,7 @@ export function TwoLevelCircuit({ initial = "AB + CD'" }: { initial?: string }) 
   const ox = X2 + outX(g2);
   return (
     <div className="lab">
-      <div className="lab-title">🔌 İki Seviyeli Devre Dönüştürücü</div>
+      <div className="lab-title">İki Seviyeli Devre Dönüştürücü</div>
       <div className="lab-controls">
         <label className="grow">
           İfade (SOP veya POS)

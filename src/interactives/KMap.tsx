@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Implicant, countLiterals, minimalPOS, minimalSOP, parse, sigma, termPOS, termSOP, truthTable } from '../lib/boolean';
 
 const GRAY: Record<number, number[]> = { 1: [0, 1], 2: [0, 1, 3, 2] };
-const COLORS = ['#e11d48', '#2563eb', '#16a34a', '#d97706', '#9333ea', '#0891b2', '#db2777', '#65a30d'];
+const COLORS = ['#b5523b', '#3d6fa3', '#3f8a5a', '#b8862b', '#7d5ba6', '#2f8a8a', '#a8577e', '#6f8a2f'];
 const DEFAULT_VARS: Record<number, string[]> = { 2: ['x', 'y'], 3: ['x', 'y', 'z'], 4: ['w', 'x', 'y', 'z'] };
 
 type Cell = 0 | 1 | 2; // 2 = X (don't care)
@@ -133,7 +133,7 @@ export function KMap({ n: n0 = 3, vars: v0, ones: o0 = [], dcs: d0 = [], mode: m
   if (step === 2)
     res.primes.forEach((p, i) => {
       const ess = res.essential.includes(p);
-      shown.push({ imp: p, color: ess ? COLORS[i % COLORS.length] : '#94a3b8', dashed: !ess, essential: ess });
+      shown.push({ imp: p, color: ess ? COLORS[i % COLORS.length] : 'var(--off)', dashed: !ess, essential: ess });
     });
   if (step === 3) res.solution.forEach((p, i) => shown.push({ imp: p, color: COLORS[i % COLORS.length], dashed: false, essential: res.essential.includes(p) }));
 
@@ -142,7 +142,7 @@ export function KMap({ n: n0 = 3, vars: v0, ones: o0 = [], dcs: d0 = [], mode: m
 
   return (
     <div className="lab kmap-lab">
-      <div className="lab-title">🗺️ {title ?? 'Karnaugh Haritası (K-map) Çözücü'}</div>
+      <div className="lab-title">{title ?? 'Karnaugh Haritası (K-map) Çözücü'}</div>
       <div className="lab-controls">
         {!lockN && (
           <label>
@@ -263,7 +263,7 @@ export function KMap({ n: n0 = 3, vars: v0, ones: o0 = [], dcs: d0 = [], mode: m
                 const ess = res.essential.includes(p);
                 return (
                   <li key={i}>
-                    <span className="chip" style={{ background: step === 2 && !ess ? '#94a3b8' : COLORS[idx % COLORS.length] }} />
+                    <span className="chip" style={{ background: step === 2 && !ess ? 'var(--off)' : COLORS[idx % COLORS.length] }} />
                     <span className="mono">{term(p)}</span>
                     <span className="muted small">
                       {' '}
@@ -379,7 +379,7 @@ export function KMapPractice({ n: n0 = 4 }: { n?: 3 | 4 }) {
   };
   return (
     <div className="lab">
-      <div className="lab-title">🏋️ K-map Antrenmanı (sonsuz soru)</div>
+      <div className="lab-title">K-map Antrenmanı (sonsuz soru)</div>
       <div className="lab-controls">
         <label>
           Değişken

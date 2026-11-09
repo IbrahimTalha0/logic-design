@@ -835,7 +835,7 @@ assign E = ~C;             // E = C'`}
       </p>
       <VerilogPlayground initial={0} />
 
-      <h2>🎯 Sınavdaki kod sorusu için adım adım tarif</h2>
+      <h2>Sınavdaki kod sorusu için adım adım tarif</h2>
       <Box kind="exam" title="Şemadan Verilog yazma — 6 adım">
         <ol>
           <li>

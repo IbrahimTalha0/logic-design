@@ -12,9 +12,9 @@ function B({ title, children }: { title: string; children: ReactNode }) {
 export default function CheatSheet() {
   return (
     <div className="page" style={{ maxWidth: 1000 }}>
-      <h1>📋 Sınav Özeti (Formül Kâğıdı)</h1>
+      <h1>Sınav Özeti (Formül Kâğıdı)</h1>
       <p className="muted">
-        Sınavdan önceki son tekrar için. <button className="icon-btn" onClick={() => window.print()}>🖨 Yazdır</button>
+        Sınavdan önceki son tekrar için. <button className="icon-btn" onClick={() => window.print()}>Yazdır</button>
       </p>
 
       <h2 style={{ borderTop: 0 }}>Bölüm 1 — Sayılar ve Kodlar</h2>

@@ -41,10 +41,10 @@ function PanelSwitch({ route, onNav }: { route: string; onNav?: () => void }) {
   return (
     <div className="panel-switch" role="tablist" aria-label="Anlatım paneli">
       <button role="tab" aria-selected={panel === 'detay'} className={panel === 'detay' ? 'active' : ''} onClick={() => pick('detay')}>
-        📘 Detaylı
+        Detaylı
       </button>
       <button role="tab" aria-selected={panel === 'ozet'} className={panel === 'ozet' ? 'active' : ''} onClick={() => pick('ozet')}>
-        ⚡ Özet
+        Özet
       </button>
     </div>
   );
@@ -99,11 +99,11 @@ function Sidebar({ route, onNav }: { route: string; onNav: () => void }) {
       ))}
       <div className="nav-chapter">
         <div className="nav-ch-title">Çalışma Araçları</div>
-        {link('verilog', <><span className="nav-num">⌨</span><span className="nav-t">Verilog Laboratuvarı</span></>)}
-        {link('araclar', <><span className="nav-num">🧰</span><span className="nav-t">Tüm Simülatörler</span></>)}
-        {link('formul', <><span className="nav-num">📋</span><span className="nav-t">Sınav Özeti (Formül Kâğıdı)</span></>)}
-        {link('sozluk', <><span className="nav-num">📖</span><span className="nav-t">Sözlük & Kartlar (EN–TR)</span></>)}
-        {link('sinav', <><span className="nav-num">🏁</span><span className="nav-t">Deneme Sınavı</span></>)}
+        {link('verilog', <><span className="nav-num" /><span className="nav-t">Verilog Laboratuvarı</span></>)}
+        {link('araclar', <><span className="nav-num" /><span className="nav-t">Tüm Simülatörler</span></>)}
+        {link('formul', <><span className="nav-num" /><span className="nav-t">Sınav Özeti (Formül Kâğıdı)</span></>)}
+        {link('sozluk', <><span className="nav-num" /><span className="nav-t">Sözlük & Kartlar (EN–TR)</span></>)}
+        {link('sinav', <><span className="nav-num" /><span className="nav-t">Deneme Sınavı</span></>)}
       </div>
       <Credit className="sidebar-credit" />
     </nav>
@@ -127,13 +127,13 @@ function LessonPage({ id, summary }: { id: string; summary: boolean }) {
     <article className={`page lesson ${summary ? 'summary' : ''}`}>
       <header className="lesson-head">
         <div className="lesson-meta">
-          {summary ? <span className="pill sum">⚡ Özet anlatım</span> : <span className="pill">📘 Detaylı anlatım</span>}
+          {summary ? <span className="pill sum">Özet anlatım</span> : <span className="pill">Detaylı anlatım</span>}
           <span className="pill ghost">Bölüm {l.chapter}</span>
-          <span className="pill ghost">📖 {l.book}</span>
-          <span className="pill ghost">⏱ ~{S ? S.minutes : l.minutes} dk</span>
+          <span className="pill ghost">{l.book}</span>
+          <span className="pill ghost">~{S ? S.minutes : l.minutes} dk</span>
           <span className="spacer" />
           <a className="switch-link" href={(summary ? '#/ders/' : '#/ozet/') + l.id}>
-            {summary ? '📘 Detaylı anlatımı aç' : '⚡ Özetini aç'}
+            {summary ? 'Detaylı anlatımı aç' : 'Özetini aç'}
           </a>
         </div>
         <h1>
@@ -207,10 +207,10 @@ export default function App() {
           </button>
           <span className="spacer" />
           <button className={`chip-toggle ${showTr ? 'on' : ''}`} onClick={() => setState({ showTr: !showTr })} title="İngilizce tanım ve soruların Türkçe çevirilerini göster/gizle">
-            🇹🇷 Çeviriler: {showTr ? 'Açık' : 'Kapalı'}
+            Çeviriler: {showTr ? 'Açık' : 'Kapalı'}
           </button>
           <button className="icon-btn" onClick={() => setState({ theme: nextTheme })} title={`Tema: ${theme}`}>
-            {theme === 'dark' ? '🌙' : theme === 'light' ? '☀️' : '🌓'}
+            <span className="hide-sm">Tema: </span>{theme === 'dark' ? 'Koyu' : theme === 'light' ? 'Açık' : 'Oto'}
           </button>
         </header>
         <main className="content">{page}</main>

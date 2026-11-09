@@ -30,15 +30,15 @@ export default function Home() {
       <h2 style={{ borderTop: 0, marginTop: 0 }}>İki anlatım paneli</h2>
       <div className="cards panel-cards">
         <a className="card" href={'#/ders/' + firstUndone.id} onClick={() => setState({ panel: 'detay' })}>
-          <h3>📘 Detaylı Anlatım</h3>
+          <h3>Detaylı Anlatım</h3>
           <p>Konuyu sıfırdan öğrenmek için. Bol örnek, benzetme, adım adım çözüm ve simülasyon. İlk kez çalışıyorsan buradan başla.</p>
         </a>
         <a className="card sum" href={'#/ozet/' + firstUndone.id} onClick={() => setState({ panel: 'ozet' })}>
-          <h3>⚡ Özet Anlatım</h3>
+          <h3>Özet Anlatım</h3>
           <p>Aynı dersler, sadeleştirilmiş: gereksiz ayrıntı ve çok basit bilgiler çıkarıldı; yalnızca kurallar, sınav tanımları ve kısa örnekler. Hızlı tekrar için.</p>
         </a>
       </div>
-      <p className="small muted">Sol menünün üstündeki <b>📘 Detaylı / ⚡ Özet</b> düğmesiyle istediğin an geçiş yapabilirsin; her dersin başında da diğer panele bağlantı var.</p>
+      <p className="small muted">Sol menünün üstündeki <b>Detaylı / Özet</b> düğmesiyle istediğin an geçiş yapabilirsin; her dersin başında da diğer panele bağlantı var.</p>
 
       <h2>Bu siteyi nasıl kullanmalısın?</h2>
       <div className="cards">
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
         <div className="card">
           <h3>3 · Pekiştir</h3>
-          <p>🎲 işaretli alıştırmalar sınırsız rastgele soru üretir. K-map ve Verilog antrenmanlarında ustalaşana kadar devam et.</p>
+          <p>Alıştırma kutuları sınırsız rastgele soru üretir. K-map ve Verilog antrenmanlarında ustalaşana kadar devam et.</p>
         </div>
         <div className="card">
           <h3>4 · Sınava hazırlan</h3>
@@ -61,17 +61,17 @@ export default function Home() {
       </div>
 
       <div className="box box-tip">
-        <div className="box-title">🌐 Dil stratejisi: Türkçe anla, İngilizce cevapla</div>
+        <div className="box-title">Dil stratejisi: Türkçe anla, İngilizce cevapla</div>
         <div className="box-body">
           <ul>
             <li>
-              Anlatım Türkçedir; teknik terimler <En>mor ve italik</En> olarak İngilizce verilir.
+              Anlatım Türkçedir; teknik terimlerin İngilizcesi <En>bu şekilde</En> vurgulanır.
             </li>
             <li>
               Sınavda çıkabilecek kritik tanımlar <b>"EN · Sınav tanımı"</b> kutularında kitabın İngilizcesiyle ve altında Türkçe çevirisiyle verilir.
             </li>
             <li>
-              Üst menüdeki <b>🇹🇷 Çeviriler</b> düğmesiyle tüm çevirileri kapatıp kendini İngilizce test edebilirsin.
+              Üst menüdeki <b>Çeviriler</b> düğmesiyle tüm çevirileri kapatıp kendini İngilizce test edebilirsin.
             </li>
             <li>
               <a href="#/sozluk">Sözlük</a> sayfasında ~150 terimin Türkçe karşılığı ve çalışma kartları var.
@@ -90,7 +90,7 @@ export default function Home() {
               const q = quiz[l.id];
               return (
                 <li key={l.id}>
-                  <span style={{ width: 20 }}>{done[l.id] ? '✅' : '⬜'}</span>
+                  <span className={`ch-mark${done[l.id] ? ' done' : ''}`} aria-label={done[l.id] ? 'Tamamlandı' : 'Tamamlanmadı'} />
                   <a href={base + l.id}>
                     <b>{l.num}</b> {l.title}
                   </a>
@@ -107,19 +107,19 @@ export default function Home() {
       <h2>Çalışma araçları</h2>
       <div className="cards">
         <a className="card" href="#/verilog">
-          <h3>⌨ Verilog Laboratuvarı</h3>
+          <h3>Verilog Laboratuvarı</h3>
           <p>Kod yaz, anında derle, doğruluk tablosu ve dalga formu gör. Otomatik puanlanan kod soruları.</p>
         </a>
         <a className="card" href="#/araclar">
-          <h3>🧰 Tüm Simülatörler</h3>
+          <h3>Tüm Simülatörler</h3>
           <p>K-map çözücü, taban dönüştürücü, tümleyen hesaplayıcı, doğruluk tablosu üretici, devre dönüştürücü…</p>
         </a>
         <a className="card" href="#/formul">
-          <h3>📋 Sınav Özeti</h3>
+          <h3>Sınav Özeti</h3>
           <p>Tüm formüller ve kurallar tek sayfada. Yazdırılabilir.</p>
         </a>
         <a className="card" href="#/sinav">
-          <h3>🏁 Deneme Sınavı</h3>
+          <h3>Deneme Sınavı</h3>
           <p>Tüm konulardan rastgele sorular + bir Verilog kod sorusu.</p>
         </a>
       </div>

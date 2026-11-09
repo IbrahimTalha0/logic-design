@@ -35,10 +35,10 @@ export function Drill({ title, make }: { title: ReactNode; make: () => DrillItem
   return (
     <div className="drill">
       <div className="drill-head">
-        <span>🎲 {title}</span>
+        <span>{title}</span>
         <span className="spacer" />
         <span className="muted small">
-          {score.ok}/{score.all} doğru {score.streak >= 3 && <>· 🔥 {score.streak} seri</>}
+          {score.ok}/{score.all} doğru {score.streak >= 3 && <>· {score.streak} seri</>}
         </span>
       </div>
       <div className="drill-q">{item.q}</div>
@@ -65,7 +65,7 @@ export function Drill({ title, make }: { title: ReactNode; make: () => DrillItem
       </div>
       {state !== null && (
         <div className={`drill-fb ${state ? 'ok' : 'bad'}`}>
-          {state ? '✅ Doğru!' : <>❌ Doğru cevap: <code>{answers[0]}</code></>}
+          {state ? 'Doğru!' : <>Doğru cevap: <code>{answers[0]}</code></>}
           {item.explain && <div className="drill-exp">{item.explain}</div>}
           {!state && (
             <button className="btn btn-ghost small" onClick={nextQ}>Yeni soru →</button>

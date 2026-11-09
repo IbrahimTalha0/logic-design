@@ -32,23 +32,22 @@ export function Def({ en, tr, term }: { en: ReactNode; tr: ReactNode; term?: str
 }
 
 type BoxKind = 'tip' | 'warn' | 'exam' | 'example' | 'info' | 'summary' | 'analogy';
-const BOX: Record<BoxKind, [string, string]> = {
-  tip: ['💡', 'İpucu'],
-  warn: ['⚠️', 'Dikkat — sık yapılan hata'],
-  exam: ['🎯', 'Sınavda'],
-  example: ['✏️', 'Örnek'],
-  info: ['ℹ️', 'Bilgi'],
-  summary: ['📋', 'Özet'],
-  analogy: ['🧠', 'Günlük hayattan'],
+const BOX: Record<BoxKind, string> = {
+  tip: 'İpucu',
+  warn: 'Dikkat',
+  exam: 'Sınavda',
+  example: 'Örnek',
+  info: 'Bilgi',
+  summary: 'Özet',
+  analogy: 'Günlük hayattan',
 };
 
 export function Box({ kind = 'info', title, children }: { kind?: BoxKind; title?: ReactNode; children: ReactNode }) {
-  const [icon, label] = BOX[kind];
+  const label = BOX[kind];
   return (
     <div className={`box box-${kind}`}>
-      <div className="box-title">
-        <span>{icon}</span> {title ?? label}
-      </div>
+      <div className="box-kicker">{kind === 'warn' && !title ? 'Dikkat — sık yapılan hata' : label}</div>
+      {title && <div className="box-title">{title}</div>}
       <div className="box-body">{children}</div>
     </div>
   );

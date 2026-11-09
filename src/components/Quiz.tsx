@@ -114,7 +114,7 @@ function QuestionCard({ q, index, onResult }: { q: Question; index: number; onRe
         )}
       </div>
       <div className="q-text">{q.q}</div>
-      {q.tr && trVisible && <div className="q-tr">🇹🇷 {q.tr}</div>}
+      {q.tr && trVisible && <div className="q-tr">{q.tr}</div>}
 
       {q.kind === 'mc' && (
         <div className="q-options">
@@ -175,7 +175,7 @@ function QuestionCard({ q, index, onResult }: { q: Question; index: number; onRe
 
       {status && (
         <div className="q-feedback">
-          <strong>{status.ok === true ? '✅ Doğru!' : status.ok === 'partial' ? '🟡 Neredeyse!' : '❌ Yanlış'}</strong>
+          <strong>{status.ok === true ? 'Doğru!' : status.ok === 'partial' ? 'Neredeyse!' : 'Yanlış'}</strong>
           {status.msg && <div className="q-msg">{status.msg}</div>}
           {q.kind === 'text' && status.ok !== true && (
             <div className="q-msg">
@@ -219,7 +219,7 @@ export function Quiz({ id, questions, title = 'Pekiştirme Soruları' }: { id: s
   return (
     <section className="quiz">
       <div className="quiz-head">
-        <h2>📝 {title}</h2>
+        <h2>{title}</h2>
         <p className="muted">
           Sorular sınavdaki gibi İngilizcedir. Takıldığınızda <b>TR çeviri</b> düğmesini kullanın; ama sınavdan önce çevirisiz çözebilmeyi hedefleyin.
         </p>

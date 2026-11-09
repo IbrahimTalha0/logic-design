@@ -8,7 +8,7 @@ import { AdderLab, AnalysisLab, CodeConverterLab } from '../interactives/Ch4Labs
 export default function Tools() {
   return (
     <div className="page">
-      <h1>🧰 Tüm Simülatörler</h1>
+      <h1>Tüm Simülatörler</h1>
       <p className="muted">Kendi sorularını kontrol etmek için bu araçları kullan. Ödev ve kitap problemlerinin cevaplarını burada doğrulayabilirsin.</p>
       <Tabs
         tabs={[

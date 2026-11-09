@@ -16,7 +16,7 @@ export default function Glossary() {
   const card = list[i % Math.max(1, list.length)];
   return (
     <div className="page">
-      <h1>📖 Sözlük ve Çalışma Kartları</h1>
+      <h1>Sözlük ve Çalışma Kartları</h1>
       <p className="muted">Sınavdaki İngilizce terimlerin Türkçe karşılıkları.</p>
       <div className="lab-controls">
         <div className="seg">
@@ -83,7 +83,7 @@ export default function Glossary() {
             </div>
             <div className="flash-controls">
               <button className="btn btn-ghost" onClick={() => { setI((i - 1 + list.length) % list.length); setFlip(false); }}>← Önceki</button>
-              <button className="btn btn-ghost" onClick={() => { setI(Math.floor(Math.random() * list.length)); setFlip(false); }}>🎲 Rastgele</button>
+              <button className="btn btn-ghost" onClick={() => { setI(Math.floor(Math.random() * list.length)); setFlip(false); }}>Rastgele</button>
               <button className="btn" onClick={() => { setI((i + 1) % list.length); setFlip(false); }}>Sonraki →</button>
             </div>
           </div>

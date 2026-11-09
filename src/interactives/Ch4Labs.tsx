@@ -76,7 +76,7 @@ export function AnalysisLab() {
 
   return (
     <div className="lab">
-      <div className="lab-title">🔍 Analiz Laboratuvarı — Şekil 4.2</div>
+      <div className="lab-title">Analiz Laboratuvarı — Şekil 4.2</div>
       <div className="seg wrap">
         {steps.map((s, i) => (
           <button key={i} className={step === i ? 'active' : ''} onClick={() => setStep(i)}>
@@ -196,7 +196,7 @@ export function CodeConverterLab() {
   const sel = OUTS.find((o) => o.n === map)!;
   return (
     <div className="lab">
-      <div className="lab-title">🔁 BCD → Excess-3 Kod Dönüştürücü (Tablo 4.2, Şekil 4.3)</div>
+      <div className="lab-title">BCD → Excess-3 Kod Dönüştürücü (Tablo 4.2, Şekil 4.3)</div>
       <div className="lab-controls">
         <label>
           BCD girişi (A B C D)
@@ -272,7 +272,7 @@ export function AdderLab() {
   const cur = names.reduce((a, nm) => a * 2 + (env[nm] ?? 0), 0);
   return (
     <div className="lab">
-      <div className="lab-title">➕ Yarım Toplayıcı / Tam Toplayıcı</div>
+      <div className="lab-title">Yarım Toplayıcı / Tam Toplayıcı</div>
       <div className="seg">
         <button className={!full ? 'active' : ''} onClick={() => setFull(false)}>
           Half adder (2 bit)
@@ -347,7 +347,7 @@ export function CombSeqGame() {
   const [ans, setAns] = useState<Record<number, boolean>>({});
   return (
     <div className="lab">
-      <div className="lab-title">🧩 Kombinasyonel mi, ardışıl mı?</div>
+      <div className="lab-title">Kombinasyonel mi, ardışıl mı?</div>
       {CS_ITEMS.map((it, i) => {
         const a = ans[i];
         const answered = a !== undefined;
@@ -361,7 +361,7 @@ export function CombSeqGame() {
               <button className={`btn btn-ghost ${answered && !it.comb ? 'done' : ''}`} disabled={answered} onClick={() => setAns({ ...ans, [i]: false })}>
                 Sequential
               </button>
-              {answered && <span className="small">{a === it.comb ? '✅' : '❌'} {it.why}</span>}
+              {answered && <span className="small">{a === it.comb ? 'Doğru.' : 'Yanlış.'} {it.why}</span>}
             </div>
           </div>
         );

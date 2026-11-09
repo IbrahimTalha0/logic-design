@@ -53,7 +53,7 @@ export function BaseConverter({ initial = '41.6875', from: f0 = 10, to: t0 = 2 }
 
   return (
     <div className="lab">
-      <div className="lab-title">🔁 Adım Adım Taban Dönüştürücü</div>
+      <div className="lab-title">Adım Adım Taban Dönüştürücü</div>
       <div className="lab-controls">
         <label>
           Sayı
@@ -78,7 +78,7 @@ export function BaseConverter({ initial = '41.6875', from: f0 = 10, to: t0 = 2 }
 
           {result.shortcut && (
             <div className="step-card">
-              <div className="step-h">⚡ Kısa yol: gruplama</div>
+              <div className="step-h">Kısa yol: gruplama</div>
               {from === 2 ? (
                 <GroupView bin={clean} size={to === 8 ? 3 : 4} />
               ) : (
@@ -237,7 +237,7 @@ export function ComplementLab() {
   const dName = base === 10 ? "9's complement" : "1's complement";
   return (
     <div className="lab">
-      <div className="lab-title">➖ Tümleyen ile Çıkarma Laboratuvarı (M − N)</div>
+      <div className="lab-title">Tümleyen ile Çıkarma Laboratuvarı (M − N)</div>
       <div className="lab-controls">
         <label>
           Taban
@@ -283,11 +283,11 @@ export function ComplementLab() {
             <div className="step-h">4) Son elde (end carry) var mı?</div>
             {r.sum.carryOut ? (
               <div>
-                ✅ Evet → elde atılır (<b>discard</b>). Sonuç pozitiftir: <b className="mono">{r.resultText}</b>
+                Evet → elde atılır (<b>discard</b>). Sonuç pozitiftir: <b className="mono">{r.resultText}</b>
               </div>
             ) : (
               <div>
-                ❌ Hayır → M &lt; N, sonuç negatiftir. Toplamın {rName}'ini al ve başına − koy: <b className="mono">{r.resultText}</b>
+                Hayır → M &lt; N, sonuç negatiftir. Toplamın {rName}'ini al ve başına − koy: <b className="mono">{r.resultText}</b>
               </div>
             )}
           </div>
@@ -408,7 +408,7 @@ export function TwosAdder() {
   const cin = sum ? sum.carries[1] : 0; // MSB'ye giren elde
   return (
     <div className="lab">
-      <div className="lab-title">➕ 8-bit 2's Complement Toplama</div>
+      <div className="lab-title">8-bit 2's Complement Toplama</div>
       <div className="lab-controls">
         <label>
           A <input className="q-input mono short" value={a} onChange={(e) => setA(e.target.value)} />
@@ -431,7 +431,7 @@ export function TwosAdder() {
           </div>
           {overflow ? (
             <div className="lab-err">
-              ⚠️ <b>Taşma (overflow)!</b> Gerçek sonuç {av + bv} ama 8 bitte gösterilemez. İpucu: MSB'ye giren elde ({cin}) ≠ MSB'den çıkan elde ({sum.carryOut}).
+              <b>Taşma (overflow)!</b> Gerçek sonuç {av + bv} ama 8 bitte gösterilemez. İpucu: MSB'ye giren elde ({cin}) ≠ MSB'den çıkan elde ({sum.carryOut}).
             </div>
           ) : (
             <div className="ok-line">✓ Sonuç doğru: {res}</div>
@@ -465,7 +465,7 @@ export function BcdAdder() {
   const b4 = (x: number) => x.toString(2).padStart(4, '0');
   return (
     <div className="lab">
-      <div className="lab-title">🔢 BCD Toplama (6 düzeltmesi)</div>
+      <div className="lab-title">BCD Toplama (6 düzeltmesi)</div>
       <div className="lab-controls">
         <label>
           A <input className="q-input mono short" value={a} onChange={(e) => setA(e.target.value)} />
@@ -514,7 +514,7 @@ export function CodeExplorer() {
   const [par, setPar] = useState<'even' | 'odd'>('even');
   return (
     <div className="lab">
-      <div className="lab-title">🧬 Kod Gezgini</div>
+      <div className="lab-title">Kod Gezgini</div>
       <div className="muted small">Bir onluk basamak seç:</div>
       <div className="seg wrap">
         {Array.from({ length: 10 }, (_, i) => (

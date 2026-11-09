@@ -103,9 +103,9 @@ export default function MockExam() {
   };
   return (
     <div className="page">
-      <h1>🏁 Deneme Sınavı</h1>
+      <h1>Deneme Sınavı</h1>
       <p className="muted">
-        Her denemede soru havuzundan rastgele sorular seçilir. Sınav koşullarını taklit etmek için üst menüden <b>🇹🇷 Çeviriler: Kapalı</b> yapıp çözmeyi dene.
+        Her denemede soru havuzundan rastgele sorular seçilir. Sınav koşullarını taklit etmek için üst menüden <b>Çeviriler: Kapalı</b> yapıp çözmeyi dene.
       </p>
       <div className="exam-bar">
         <div className="seg">
@@ -115,9 +115,9 @@ export default function MockExam() {
             </button>
           ))}
         </div>
-        <span className="mono">⏱ {String(mins).padStart(2, '0')}:{String(secs).padStart(2, '0')}</span>
+        <span className="mono">{String(mins).padStart(2, '0')}:{String(secs).padStart(2, '0')}</span>
         <span className="spacer" />
-        <button className="btn btn-ghost small" onClick={restart}>🎲 Yeni deneme</button>
+        <button className="btn btn-ghost small" onClick={restart}>Yeni deneme</button>
       </div>
       <Quiz key={`${seed}-${scope}`} id={`mock-${scope}`} questions={questions} title="Deneme Soruları" />
     </div>

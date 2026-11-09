@@ -18,7 +18,7 @@ function SyntaxHunt() {
   const [open, setOpen] = useState<Record<number, boolean>>({});
   return (
     <div className="lab">
-      <div className="lab-title">🐞 Hata Avı — Problem 3.35</div>
+      <div className="lab-title">Hata Avı — Problem 3.35</div>
       <p className="small">Her satırdaki hataları önce kendin bul, sonra satıra tıklayıp kontrol et. (Kapı örnek adları isteğe bağlıdır.)</p>
       <div className="hunt">
         {BUGGY.map((l, i) => (

@@ -30,7 +30,7 @@ export function GatePlayground({ only }: { only?: GateType[] }) {
   const names = ['x', 'y', 'z'];
   return (
     <div className="lab">
-      <div className="lab-title">🎛️ Kapı Oyun Alanı</div>
+      <div className="lab-title">Kapı Oyun Alanı</div>
       <div className="seg wrap">
         {list.map((t) => (
           <button key={t} className={t === g ? 'active' : ''} onClick={() => setG(t)}>
@@ -117,7 +117,7 @@ export function TimingDiagram() {
   };
   return (
     <div className="lab">
-      <div className="lab-title">📈 Zamanlama Diyagramı <En>timing diagram</En></div>
+      <div className="lab-title">Zamanlama Diyagramı <En>timing diagram</En></div>
       <div className="muted small">x ve y satırlarındaki kutulara tıklayarak giriş sinyalini değiştir; çıkışlar anında güncellenir.</div>
       <svg viewBox={`0 0 ${L + 5 * W + 10} ${rows.length * (H + 18) + 10}`} className="timing" role="img" aria-label="zamanlama diyagramı">
         {rows.map((r, ri) => (
@@ -166,7 +166,7 @@ export function TruthTableLab({ initial = "xy' + x'z" }: { initial?: string }) {
   }, [src]);
   return (
     <div className="lab">
-      <div className="lab-title">🧮 Doğruluk Tablosu ve Kanonik Form Üretici</div>
+      <div className="lab-title">Doğruluk Tablosu ve Kanonik Form Üretici</div>
       <label className="block">
         Boole ifadesi (F =)
         <input className="q-input mono" value={src} onChange={(e) => setSrc(e.target.value)} spellCheck={false} />
@@ -265,7 +265,7 @@ export function EquivalenceChecker({ a: a0 = "(x + y)'", b: b0 = "x'y'" }: { a?:
   }, [a, b]);
   return (
     <div className="lab">
-      <div className="lab-title">⚖️ Eşdeğerlik Kontrolü (iki ifade aynı mı?)</div>
+      <div className="lab-title">Eşdeğerlik Kontrolü (iki ifade aynı mı?)</div>
       <div className="lab-controls">
         <label className="grow">
           İfade 1 <input className="q-input mono" value={a} onChange={(e) => setA(e.target.value)} spellCheck={false} />
@@ -320,7 +320,7 @@ export function ParityLab() {
   const names = ['x', 'y', 'z', 'P'];
   return (
     <div className="lab">
-      <div className="lab-title">📡 Çift Parite Üreteci ve Denetleyicisi</div>
+      <div className="lab-title">Çift Parite Üreteci ve Denetleyicisi</div>
       <div className="parity-flow">
         <div className="pf-box">
           <div className="pf-h">Gönderici</div>

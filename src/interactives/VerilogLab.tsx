@@ -502,7 +502,7 @@ function Results({ out }: { out: SimOutput }) {
         <ul className="diags">
           {out.diags.map((d, i) => (
             <li key={i} className={`diag ${d.level}`}>
-              <b>{d.level === 'error' ? '⛔ Hata' : d.level === 'warning' ? '⚠️ Uyarı' : 'ℹ️ Bilgi'}</b> (satır {d.line}): {d.msg}
+              <b>{d.level === 'error' ? 'Hata' : d.level === 'warning' ? 'Uyarı' : 'Bilgi'}</b> (satır {d.line}): {d.msg}
             </li>
           ))}
         </ul>
@@ -566,7 +566,7 @@ export function VerilogPlayground({ initial = 0, height = 16 }: { initial?: numb
   const out = useMemo(() => simulate(code), [code]);
   return (
     <div className="lab">
-      <div className="lab-title">🧪 Verilog Simülatörü</div>
+      <div className="lab-title">Verilog Simülatörü</div>
       <div className="lab-controls">
         <label className="grow">
           Örnek yükle
@@ -626,7 +626,7 @@ export function VerilogExercises() {
   };
   return (
     <div className="lab">
-      <div className="lab-title">🎯 Kod Sorusu Antrenmanı (otomatik puanlanır)</div>
+      <div className="lab-title">Kod Sorusu Antrenmanı (otomatik puanlanır)</div>
       <div className="seg wrap">
         {EXERCISES.map((e, k) => (
           <button key={k} className={k === i ? 'active' : ''} onClick={() => { setI(k); setFb(null); setShowSol(false); }}>
@@ -651,7 +651,7 @@ export function VerilogExercises() {
       </div>
       {fb && (
         <div className={fb.ok ? 'ok-line' : 'lab-err'}>
-          {fb.ok ? '✅ Tebrikler! Tüm giriş kombinasyonlarında doğru çalışıyor.' : '❌ Henüz değil:'}
+          {fb.ok ? 'Tebrikler! Tüm giriş kombinasyonlarında doğru çalışıyor.' : 'Henüz değil:'}
           {fb.msgs.map((m, k) => (
             <div key={k} className="small">• {m}</div>
           ))}
