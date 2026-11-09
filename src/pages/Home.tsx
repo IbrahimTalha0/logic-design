@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="page">
       <section className="hero">
-        <h1>Lojik Tasarım — Sıfırdan Sınava</h1>
+        <h1>Logic Design — Sıfırdan Sınava</h1>
         <p>
           Sayı sistemlerinden Karnaugh haritalarına, NAND/NOR devrelerinden Verilog koduna ve kombinasyonel devre analiz/tasarımına kadar sınav konularının tamamı; sade Türkçe anlatım, İngilizce terimler,
           etkileşimli simülasyonlar ve otomatik kontrol edilen sorularla.

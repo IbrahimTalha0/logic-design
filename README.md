@@ -1,6 +1,6 @@
-# Lojik Tasarım — Sıfırdan Sınava
+# Logic Design — Sıfırdan Sınava
 
-Lojik Tasarım dersinin sınavına hazırlanırken kendim için yazdığım, etkileşimli bir çalışma sitesi. Konuları okuyup geçmek yerine her şeyi deneyerek öğrenmek istedim: K-map'leri elle doldurmak, devreleri simüle etmek, Verilog kodu yazıp anında kontrol ettirmek. Sonuç bu proje oldu. Aynı sınava çalışan başkalarının da işine yarayabilir diye paylaşıyorum.
+Logic Design dersinin sınavına hazırlanırken kendim için yazdığım, etkileşimli bir çalışma sitesi. Konuları okuyup geçmek yerine her şeyi deneyerek öğrenmek istedim: K-map'leri elle doldurmak, devreleri simüle etmek, Verilog kodu yazıp anında kontrol ettirmek. Sonuç bu proje oldu. Aynı sınava çalışan başkalarının da işine yarayabilir diye paylaşıyorum.
 
 Anlatım Türkçe, terimlerin İngilizceleri de yanında veriliyor.
 

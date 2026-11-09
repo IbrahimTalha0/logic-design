@@ -67,7 +67,7 @@ function Sidebar({ route, onNav }: { route: string; onNav: () => void }) {
       <a href="#/" className="brand" onClick={onNav}>
         <span className="brand-logo">⊕</span>
         <span>
-          <b>Lojik Tasarım</b>
+          <b>Logic Design</b>
           <small>Sıfırdan sınava</small>
         </span>
       </a>
@@ -203,7 +203,7 @@ export default function App() {
             ☰
           </button>
           <button className="crumb" onClick={() => go('')}>
-            Lojik Tasarım
+            Logic Design
           </button>
           <span className="spacer" />
           <button className={`chip-toggle ${showTr ? 'on' : ''}`} onClick={() => setState({ showTr: !showTr })} title="İngilizce tanım ve soruların Türkçe çevirilerini göster/gizle">
