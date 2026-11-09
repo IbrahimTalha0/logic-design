@@ -4,7 +4,7 @@ Logic Design dersinin sınavına hazırlanırken kendim için yazdığım, etkil
 
 Anlatım Türkçe, terimlerin İngilizceleri de yanında veriliyor.
 
-**Canlı site:** https://ibrahimtalha0.github.io/lojik-tasarim-ders/
+**Canlı site:** https://ibrahimtalha0.github.io/logic-design/
 
 ## Kapsam
 
